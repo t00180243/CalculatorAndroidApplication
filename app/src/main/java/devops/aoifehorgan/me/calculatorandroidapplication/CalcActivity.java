@@ -6,8 +6,6 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
-import net.hockeyapp.android.CrashManager;
-import net.hockeyapp.android.UpdateManager;
 
 import java.text.DecimalFormat;
 import java.util.LinkedList;
@@ -26,39 +24,9 @@ public class CalcActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calc);
-        checkForUpdates();
+
     }
-        @Override
-        public void onResume() {
-            super.onResume();
-            // ... your own onResume implementation
-            checkForCrashes();
-        }
 
-        @Override
-        public void onPause() {
-            super.onPause();
-            unregisterManagers();
-        }
-
-        @Override
-        public void onDestroy() {
-            super.onDestroy();
-            unregisterManagers();
-        }
-
-        private void checkForCrashes() {
-            CrashManager.register(this);
-        }
-
-        private void checkForUpdates() {
-            // Remove this for store builds!
-            UpdateManager.register(this);
-        }
-
-        private void unregisterManagers() {
-            UpdateManager.unregister();
-        }
 
 
 
