@@ -47,6 +47,16 @@ android {
             println "coverage report generated at file://${reports.html.destination}/index.html"
         }
     }
+    testOptions.unitTests.all {
+        testLogging {
+            events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+            exceptionFormat 'full'
+        }
+        maxHeapSize = '2048m'
+        maxParallelForks = 1
+        forkEvery = 1
+    }
+    testOptions.unitTests.includeAndroidResources true
 
 }
 
