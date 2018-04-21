@@ -1,0 +1,27 @@
+language: android
+
+android:
+  components:
+  #needed when using a SDK greater than 24
+  - tools
+  - platform-tools
+  - tools
+  #build tools versions to be used by project
+  - build-tools-26.0.2
+  - build-tools-25.0.1
+  - build-tools-22.0.1
+  #SDK versions used to compile project
+  - android-25
+  - android-22
+  - android-26
+  #additional components
+  - extra-google-google_play_services
+  - addon-google_apis-google-25
+  - addon-google_apis-google-22
+  - sys-img-x86-google_apis-22
+  - sys-img-x86-google_apis-25
+  - extra-google-m2repository
+  - extra-android-support
+  - extra-android-m2repository
+  #specify system image for emulator
+  - sys-img-armeabi-v7a-android-22
