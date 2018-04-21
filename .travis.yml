@@ -31,6 +31,9 @@ android:
     - android-sdk-license-.+
     - google-gdk-license-.+
 
+before_install:
+- chmod +x gradlew
+
 before_script:
 #Start Emulator
 #- echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
@@ -42,3 +45,6 @@ before_script:
 #Install .apk onto device
 #- adb -s emulator-5554 install app/build/outputs/apk/app-debug.apk
 #- adb shell am start -a android.intent.action.MAIN -n com.android.settings/.Settings
+
+script:
+- "./gradlew assembleDebug"
