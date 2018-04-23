@@ -44,8 +44,40 @@ public class CalcInstrumentedTest {
         onView(withId(R.id.textViewAns)).check(matches(withText("2+2")));
         onView(withId(R.id.buttonEql)).perform(click());
         onView(withId(R.id.textViewAns)).check(matches(withText("4")));
+    }
+
+    @Test
+    public void testSubtraction() {
+        // Type text and then press the button.
+        onView(withId(R.id.button6)).perform(click());
+        onView(withId(R.id.buttonSub)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.textViewAns)).check(matches(withText("6-1")));
+        onView(withId(R.id.buttonEql)).perform(click());
+        onView(withId(R.id.textViewAns)).check(matches(withText("5")));
+    }
 
 
+    @Test
+    public void testMultiply() {
+        // Type text and then press the button.
+        onView(withId(R.id.button3)).perform(click());
+        onView(withId(R.id.buttonMul)).perform(click());
+        onView(withId(R.id.button1)).perform(click());
+        onView(withId(R.id.textViewAns)).check(matches(withText("3x1")));
+        onView(withId(R.id.buttonEql)).perform(click());
+        onView(withId(R.id.textViewAns)).check(matches(withText("3")));
+    }
+
+    @Test
+    public void testDivision() {
+        // Type text and then press the button.
+        onView(withId(R.id.button8)).perform(click());
+        onView(withId(R.id.buttonDiv)).perform(click());
+        onView(withId(R.id.button4)).perform(click());
+        onView(withId(R.id.textViewAns)).check(matches(withText("8/4")));
+        onView(withId(R.id.buttonEql)).perform(click());
+        onView(withId(R.id.textViewAns)).check(matches(withText("2")));
     }
 
 }
