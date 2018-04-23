@@ -78,7 +78,13 @@ public class CalcUnitTest {
         assertFalse(actual);
     }
 
+    @Test
+    public void findLastOperator() throws Exception {
+    }
 
+    @Test
+    public void calculate() throws Exception {
+    }
 
     @Test
     public void resetCalculator() throws Exception {
