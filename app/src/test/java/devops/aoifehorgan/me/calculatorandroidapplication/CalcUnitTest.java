@@ -69,7 +69,7 @@ public class CalcUnitTest {
     public void endsWithNumber() throws Exception {
         boolean actual = activity.endsWithNumber();
         //int expected = false;
-        assertFalse("222E",actual);
+        assertFalse("2222",actual);
     }
 
     @Test
