@@ -22,7 +22,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
  */
 @RunWith(AndroidJUnit4.class)
 
-public class ExampleInstrumentedTest {
+public class CalcInstrumentedTest {
 
     @Test
     public void useAppContext() throws Exception {

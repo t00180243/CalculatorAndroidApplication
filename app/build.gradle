@@ -52,7 +52,7 @@ android {
             events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
             exceptionFormat 'full'
         }
-        maxHeapSize = '2048m'
+
         maxParallelForks = 1
         forkEvery = 1
     }
